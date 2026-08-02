@@ -22,7 +22,7 @@ julia model_state_gen_v2.jl -h
 To keep the working folder tidy, it is suggested that the starter state, list of monomials, and output are contained in separate sub-directories. The subdirectories `starter`, `squeezed`, and `output` have been created for that purpose.
 
 ### Example run
-The necessary input files for an example run is included. This creates a basis necessary for constructing the Laughlin quasielectron state (following [arXiv:1308.4920](https://arxiv.org/abs/1308.4920). Run the example with
+The necessary input files for an example run is included. This creates a basis necessary for constructing the Laughlin quasielectron state (following [arXiv:1308.4920](https://arxiv.org/abs/1308.4920)). Run the example with
 
 ```
 julia model_state_gen_v2.jl -i starter/J_1001001001001001 -a 11000 --normalize -m squeezed/squeeze_110001001001001001001 --output-format decimal --full -o "output/qe_basis_8e"
