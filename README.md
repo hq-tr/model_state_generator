@@ -4,8 +4,9 @@
 This repository contains the script for a common procedure used for generating a model state in FQH study. The procedure is as follows:
 1. Input with a "starter" state, which is given as a collection of monomials and the corresponding coefficients.
 2. (Optional) append to the beginning of each monomial a certain binary string. The string could be empty, in which case no addition is made.
-3. Take another input, which is a list of monomials.
-4. The output is a basis that consist of the starter state in step 1, along with all monomials in step 3 that do not appear in the starter state. Each monomial is saved as a separate state
+3. (Optional) normalize the starter state. This is only necessary if the starter state is a pure Jack polynomial.
+4. Take another input, which is a list of monomials.
+5. The output is a basis that consist of the starter state in step 1, along with all monomials in step 3 that do not appear in the starter state. Each monomial is saved as a separate state
 
 ## Using the script
 ### Pre-requisite
