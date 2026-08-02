@@ -12,7 +12,7 @@ This repository contains the script for a common procedure used for generating a
 The script requires the [QHE_Julia](https://github.com/hq-tr/QHE_Julia) script. Modify the preamble in `model_state_gen_v2.jl` to link to the right script.
 
 ### Input paramters
-To see the available parameters and the corresponding flag, use
+To see the available parameters and the corresponding flags, use
 
 ```
 julia model_state_gen_v2.jl -h
