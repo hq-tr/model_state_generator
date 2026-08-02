@@ -57,14 +57,18 @@ function main()
 
 	println("The system has $Ne electrons and $No orbitals.")
 
-	# Save initial state
-	printwf(mainstate;fname="$(outputfile)/basis_0")
-
 	#squeezed_basis = squeezedhilbertspace(maximum(mainstate.basis)) # All monomials squeezed from root of main state
 	squeezed_state = readwf(monomialfile)
 
 	if full # Collate the main state and squeezed basis into a single basis
 		mainstate,squeezed_state = collate_vector(mainstate,squeezed_state)
+	end
+
+	# Save a copy of the initial state
+	if outputformat == "decimal"
+		printwf(mainstate;fname="$(outputfile)/basis_0",format=:DEC)
+	elseif outputformat == "binary"
+		printwf(mainstate;fname="$(outputfile)/basis_0",format=:BIN)
 	end
 
 	squeezed_basis = squeezed_state.basis
